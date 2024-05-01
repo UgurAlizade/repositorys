@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+.ul-1:not(.ul-2) {    
+display: flex;
+list-style-type:none;
+background-color: #ffe5c5;
+height: 5vh;
+justify-content: space-around;
+align-items: center;
+color: black;
+font-size: 1.5vw;
+}
+.ul-2 {
+    font-size: 1vw;
+    position: absolute;
+    left: 85vw;
+    list-style-type: none;
+    background-color: #ffe5c5;
+    padding: 0.5vw;
+    border: solid 1px;
+    display: none;
+}
+li:hover {
+    color: white;
+    cursor: pointer;
+}
+.lis-contact:hover .ul-2 {
+    display: block;
+}
+.lis-contact:hover {
+    color: black;
+}
+.imagez {
+    width: 10vw;
+}
+.main {
+    background-color: #ffe5c5;
+    border: solid 0.5vw;
+    display: flex;
+    justify-content: space-around;
+    height: 50vh;
+    z-index: 2;
+    position: relative;
+    top: 15vh;
+    width: 70vw;
+    align-items: center;
+    left: 15vw;
+    animation: anim2 2s ease 0s 1 normal forwards;
+    opacity: 0;
+    animation: main 5s forwards;
+}
+div {
+    z-index: 2;
+}
+.div1,.div2,.div3 {
+    border: solid 1px;
+    padding: 1vw;
+    background-color: #ffe5c5;
+    height: 35vh;
+    width: 15vw;
+    text-align: center;
+}
+
+.div1,.div2,.div3 {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+.div1:hover,.div2:hover,.div3:hover {
+    cursor: pointer;
+    animation: myAnim2 2s ease 0s 1 normal forwards;
+}
+@keyframes main {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(250px) rotate(200deg);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0) rotate(0deg);
+	}
+}
+@keyframes myAnim2 {
+	0% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+		transform-origin: center center;
+	}
+
+	10% {
+		animation-timing-function: ease-in;
+		transform: scale(0.91);
+	}
+
+	17% {
+		animation-timing-function: ease-out;
+		transform: scale(0.98);
+	}
+
+	33% {
+		animation-timing-function: ease-in;
+		transform: scale(0.87);
+	}
+
+	45% {
+		animation-timing-function: ease-out;
+		transform: scale(1);
+	}
+}
